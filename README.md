@@ -10,3 +10,16 @@ PERSONAJES DE RICK AND MORTY
 --npm install sass // crear variables para las para los estilo de css 
 --npm install react-router-dom // para crear  las rutas de la aplicacion
 --npm install react-paginate --save // para manejar la paginacion  
+
+# paginacion con React-paginate 
+
+se importa en app.js el componete 
+<Pagination
+  info={info}
+  pageNumber={pageNumber}
+  updatePageNumber={updatePageNumber}
+/> 
+
+-- importamos los paquetes en el componente d epaginacion
+import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
