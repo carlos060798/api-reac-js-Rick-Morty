@@ -2,11 +2,13 @@ import  { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import "./Pagination.scss"
 // eslint-disable-next-line react/prop-types
-function  Pagination ({ pageNumber, info, updatePageNumber }) {
+function  Pagination ({ pageNumber, info, updatePageNumber }) { 
+  
+// función para manejar la función de cambio de página
   let pageChange = (data) => {
     updatePageNumber(data.selected + 1);
   };
-
+ //  componente de paginación sea adapte al tamaño de la pantalla
   const [width, setWidth] = useState(window.innerWidth);
   const updateDimensions = () => {
     setWidth(window.innerWidth);
