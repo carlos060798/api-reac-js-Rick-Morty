@@ -105,4 +105,6 @@ Cada ruta requiere 2 cosas: el path al que conducirá la aplicación y el elemen
             Rick & Morty <span className="text-primary">WiKi</span>
           </Link>
         </div>
-      </nav>
+      </nav>  
+
+
