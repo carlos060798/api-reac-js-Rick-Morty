@@ -39,4 +39,70 @@ import ReactPaginate from "react-paginate";
         pageCount={info?.pages}
         onPageChange={pageChange}
         pageClassName="page-item"
-        pageLinkClassName="page-link"
+        pageLinkClassName="page-link"  
+
+# codigos de cada filtros
+
+<div className="accordion-body d-flex flex-wrap gap-3">
+          {status.map((item, index) => (
+            <FilterBtn
+              key={index}
+              index={index}
+              name="status"
+              task={updateStatus}
+              updatePageNumber={updatePageNumber}
+              input={item}
+            />  
+
+--filtro de genero
+<div className="accordion-body d-flex flex-wrap gap-3">
+  {genders.map((items, index) => {
+    return (
+      <FilterBtn
+        name="gender" index={index} key={index}
+        updatePageNumber={updatePageNumber}
+        task={updateGender} input={items}
+      />
+      );
+    })}
+  </div>
+</div>  
+
+
+# Cómo configurar React RouterAquí hay una demostración de nuestro componente de navegación:  
+
+1- se crea la carpeta rutas para en rutar con los componetes  episodios y localitation 
+2-Para declarar el enrutador y definir todo tipo de rutas de archivos, debemos importar react-router-dom
+--import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+3-crea un nuevo componente Router y colóquelo dentro del componente Navbar. 
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+      </div>
+    </Router>
+  );
+}
+4-Ahora, necesitamos definir todas nuestras rutas. Recuerda, Routes es una colección de Route. La ruta es la ruta real del archivo.
+
+Cada ruta requiere 2 cosas: el path al que conducirá la aplicación y el element que se cargará.  
+<Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/episodes" element={<Episodes />} />
+
+          <Route path="/location" element={<Location />} />
+        </Routes>
+      </Router>
+
+5-se crea labarra de navegacion en el componete Navbar
+ <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div className="container">
+          <Link to="/" className="navbar-brand fs-3 ubuntu">
+            Rick & Morty <span className="text-primary">WiKi</span>
+          </Link>
+        </div>
+      </nav>

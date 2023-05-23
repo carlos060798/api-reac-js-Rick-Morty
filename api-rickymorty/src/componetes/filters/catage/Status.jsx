@@ -1,8 +1,8 @@
 import FilterBtn from "../Filterbtn";
 
 // eslint-disable-next-line react/prop-types
-export default function Status({ updateStatus, updatePageNumber }) {
-  let status = ["Alive", "Dead", "Unknown"];
+export default function Status({ updateStatus, updatePageNumber }) { 
+  let status = ["Alive", "Dead", "Unknown"]; // array de estatus de personajes
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingOne">

@@ -35,17 +35,17 @@ function Filter({
         <div className="accordion" id="accordionExample">
           {/* Category components will be placed here */}
           <Status
-  updatePageNumber={updatePageNumber}
-  updateStatus={updateStatus}
-/>
-<Species
-  updatePageNumber={updatePageNumber}
-  updateSpecies={updateSpecies}
-/>
-<Gender
-  updatePageNumber={updatePageNumber}
-  updateGender={updateGender}
-/>
+            updatePageNumber={updatePageNumber}
+            updateStatus={updateStatus}
+          />
+          <Species
+            updatePageNumber={updatePageNumber}
+            updateSpecies={updateSpecies}
+          />
+          <Gender
+            updatePageNumber={updatePageNumber}
+            updateGender={updateGender}
+          />
         </div>
       </div>
     </>
