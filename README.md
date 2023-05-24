@@ -107,4 +107,42 @@ Cada ruta requiere 2 cosas: el path al que conducirá la aplicación y el elemen
         </div>
       </nav>  
 
+# para visualizar la targeta de cada perosnaje individualmete
+ Ahora, escribe este código en caso de que quieras mostrar el estado actual de cada personaje
+ {(() => {
+          if (status === "Dead") {
+            return <div className="badge bg-danger fs-5">{status}</div>;
+          } else if (status === "Alive") {
+            return <div className=" badge bg-success fs-5">{status}</div>;
+          } else {
+            return <div className="badge bg-secondary fs-5">{status}</div>;
+          }
+        })()}
 
+A continuación, escribe este código para mostrar toda la información sobre el personaje: 
+
+<div className="content">
+  <div className="">
+    <span className="fw-bold">Gender : </span>
+    {gender}
+  </div>
+  <div className="">
+    <span className="fw-bold">Location: </span>
+    {location?.name}
+  </div>
+  <div className="">
+    <span className="fw-bold">Origin: </span>
+    {origin?.name}
+  </div>
+  <div className="">
+    <span className="fw-bold">Species: </span>
+    {species}
+  </div>
+</div> 
+
+// // <Route path="/" element={<Home />} />
+
+          <Route path="/episodes" element={<Episodes />} />
+
+          <Route path="/location" element={<Location />} />
+        </Routes>

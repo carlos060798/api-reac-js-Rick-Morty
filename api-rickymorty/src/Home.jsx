@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Search from "./componetes/Search/Search";
 import Card from "./componetes/card/Card";
 import Filter from "./componetes/filters/Filters";
-import Navbar from "./componetes/navbar/Navar";
 import Pagination from "./componetes/Pagination/Pagination"; 
 
  export default function Home(){
@@ -37,7 +36,6 @@ useEffect(() => {
 return (
   <>
     <div className="App container"> 
-      <Navbar/>
       <h1 className="text-center mb-3">Characters</h1>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className=" d-flex">
@@ -46,7 +44,7 @@ return (
 />
           <div className="col-lg-8 col-12">
             <div className="row">
-              <Card results={results} />
+            <Card page="/" results={results} />
             </div>
           </div>
         </div>
