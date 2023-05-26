@@ -24,7 +24,6 @@ function Nabar() {
             className="collapse navbar-collapse justify-content-end"
             id="navbarNavAltMarkup"
           >
-            {" "}
             <div className="navbar-nav fs-5">
               <NavLink to="/" className="nav-link">
                 Characters
@@ -33,7 +32,7 @@ function Nabar() {
                 Episode
               </NavLink>
               <NavLink
-                activeClassName="active"
+                ClassName="active"
                 className="nav-link"
                 to="/location"
               >

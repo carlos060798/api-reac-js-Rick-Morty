@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import styles from "./Card.module.scss";
-
-function Card({ results }) {
+import { Link } from "react-router-dom";
+function Card({ page, results }) {
   // recibe los resultados de la consulta de la api
   let CardsGroup; // agrupa  los results en una varaible
 
-  //valida si hay o no datos de la consylta del api
+  //valida si hay o no datos de la consulta del api
   if (results) {
     // si hay resultados itera el array de result y extrae las propiedades  de cada objeto  por personaje
     CardsGroup = results.map((result) => {
@@ -44,7 +44,9 @@ function Card({ results }) {
 
       return (
         //creacion de card que conyinen los datos del personaje
-        <div
+        <Link
+          style={{ textDecoration: "none" }}
+          to={`${page}${id}`}
           key={id}
           className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative text-dark"
         >
@@ -62,7 +64,7 @@ function Card({ results }) {
           </div>
 
           {statusPersonaje()}
-        </div>
+        </Link>
       );
     });
   } else {
@@ -70,6 +72,7 @@ function Card({ results }) {
   }
 
   return <>{CardsGroup}</>;
+
 }
 
 export default Card;
