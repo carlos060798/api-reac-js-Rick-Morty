@@ -167,4 +167,6 @@ A continuación, escribe este código para mostrar toda la información sobre el
           </div>
 
           {statusPersonaje()}
-        </div>
+        </div> 
+
+- se crea el build de producion de la app
