@@ -1,5 +1,7 @@
 # api-reac-js-Rick-Morty
-PERSONAJES DE RICK AND MORTY
+PERSONAJES DE RICK AND MORTY   lin 
+# link
+https://api-reac-js-rick-morty.netlify.app/location
 # script inicales requerido  para inicilizar el proyecto 
 
 -- npm create vite@latest  // crear proyecto con vite y reac js
